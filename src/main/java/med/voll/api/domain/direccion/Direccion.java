@@ -1,7 +1,6 @@
-package med.voll.api.direccion;
+package med.voll.api.domain.direccion;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,8 +25,24 @@ public class Direccion {
         this.ciudad = direccion.ciudad();
     }
 
+    public String getNumero() {
+        return numero;
+    }
 
-    {
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public String getDistrito() {
+        return distrito;
     }
 
     public Direccion actualizarDatos(DatosDireccion direccion) {
